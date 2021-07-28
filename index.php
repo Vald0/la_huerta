@@ -30,8 +30,7 @@ $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
 
 if($query->num_rows > 0){
     echo '<div class="products-lists">';
-    //Variable Global
-    $glbl_name =" "; 
+   
     
     while($row = $query->fetch_assoc()){
 
@@ -40,14 +39,14 @@ if($query->num_rows > 0){
         $Precio = $row["Precio"];
         $status = $row["status"];
         $unidad = $row["Unidad"];
-
+        $id = $row["id"];
 
 ?>
     <?php if($status == 1){ ?>
 
     <div class="product-box">
     <div class="product">
-    <a id="target"  target="" rel="noopener noreferrer">
+    <a href="single_product_page.php?producto=<?php echo $id ;?>" target="_blank" rel="noopener noreferrer">
         <p class="detail-title call-<?php echo $nombre_p ?>"><?php echo $nombre_p; ?></p>
         <div class="image-box" >
             <img class= "call-<?php echo $nombre_p ?>" src="<?php echo $url_p; ?>" alt="imagen de <?php echo $nombre_p?>" />
@@ -101,6 +100,36 @@ else{ ?>
 
 
 <script>
+<?php 
+//inlur el archivo de configuracion de la conexion de la base de datos
+include 'dbConfig.php';
+// Obtener informacio de la base de datos
+$query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
+     if($query->num_rows > 0){
+    while($row = $query->fetch_assoc()){
+
+        $nombre_p = $row["Nombre"];
+        $url_p = $row["file_name"];
+
+        $cadena = str_replace(' ', '',$nombre_p) //los espacios del string son removidos
+        ?>
+
+
+            <?php if($status == 1){ ?>
+
+                let call_<?php echo $cadena ?> =   document.querySelector('.call-<?php echo $nombre_p ?>');
+                console.log(call_<?php echo $cadena; ?>);
+                document.addEventListener('click', function(select_prod) {
+                    
+                });
+
+
+        <?php }; ?>
+
+<?php 
+}?>
+<?php
+}  ?>
 
 
    </script>

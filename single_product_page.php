@@ -16,10 +16,75 @@
 include 'header.php';
 include 'dbconfig.php';
 
+$title = 'Name of Product';
+
+$id_call = $_GET['producto'];
+
+echo $id_call;
 
 ?>
+<section class="singular-container"> 
+
+
+<?php
+// Include the database configuration file
+include 'dbConfig.php';
+
+// Obtener informacion de la base de datos
+$query = $db->query("SELECT * FROM t_product WHERE id = '$id_call'");
+
+
+if($query->num_rows > 0){
+   
+    
+    
+    if($row = $query->fetch_assoc()){
+
+        $nombre_p = $row["Nombre"];
+        $url_p = $row["file_name"];
+        $Precio = $row["Precio"];
+        $status = $row["status"];
+        $unidad = $row["Unidad"];
+        $id = $row["id"];
+
+?>
+ 
+    <?php if($status == 1){ ?>
+      <div class="single-container">
+        <div class="left-info">
+          <h1 class="title-product"><?php echo $nombre_p ?></h1>
+          <img src="<?php echo $url_p ?>" alt="iamgen de <?php echo $nombre_p?>">
+        </div>
+
+        <div class="rigth-info">
+         <h3> <?php echo '$ '.$Precio ?> </h3>
+         <h3><?php echo'/'. $unidad ?></h3>
+         <div class="boton-carrito">
+         <a href="">Agregar al carrito<i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+        </div>
+      </div>
+  
+<?php 
+
+} ?>
+
+<?php 
+
+}
+
+
+} 
+
+else{ ?>
+ <p>No file(s) found...</p>
+<?php } ?>
 
 
 
+
+
+
+
+</section>
 </body>
 </html>
