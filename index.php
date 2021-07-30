@@ -59,6 +59,7 @@ if($query->num_rows > 0){
                 <a href="#quit<?php echo $nombre_p?>"><i class="fas fa-minus"></i></a>
                 <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 <a href="#<?php echo $nombre_p?>"><i class="fas fa-plus"></i></a>
+                <p>gfgd</p>
                 
             </div>
         </div>
