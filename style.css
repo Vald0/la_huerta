@@ -109,7 +109,7 @@ input::placeholder {
 
 .options-place {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33% 33% 33%;
 }
 
 .options-place .item-option {
@@ -299,6 +299,7 @@ input::placeholder {
 /**contenido productos**/
 
 .title-section {
+    text-align: center;
     padding-top: 6rem;
     font-size: 20px;
     color: #aaa;
@@ -548,8 +549,12 @@ table {
     font-size: 3.5rem;
 }
 
-.right-info {
-    display: flex;
-    align-items: baseline;
+.rigth-info {
     font-size: xx-large;
+}
+
+.boton-carrito {
+    background-color: #419d61;
+    padding: 1rem;
+    border-radius: 15%;
 }

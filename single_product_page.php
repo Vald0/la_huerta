@@ -57,8 +57,7 @@ if($query->num_rows > 0){
         </div>
 
         <div class="rigth-info">
-         <h3> <?php echo '$ '.$Precio ?> </h3>
-         <h3><?php echo'/'. $unidad ?></h3>
+         <h3> <?php echo '$ '.$Precio.'/'. $unidad ?> </h3>
          <div class="boton-carrito">
          <a href="">Agregar al carrito<i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
@@ -86,5 +85,7 @@ else{ ?>
 
 
 </section>
+
+<?php include 'footer.php'; ?> 
 </body>
 </html>

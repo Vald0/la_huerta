@@ -1,7 +1,9 @@
 <header>
+    <a href="index.php">
     <div class="logo-place ">
         <img src="assets/logo.png" alt="logotipo">
     </div>
+    </a>
     <div class="search-place desktop">
         <input type="text" id="idbusqueda" placeholder="Encuentra todo lo que necesitas">
         <button class="btn-main btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>

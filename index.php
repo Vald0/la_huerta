@@ -16,7 +16,7 @@
 <?php
 include 'header.php';
 ?>
-<h2 class = "title-section">Productos del dia corazon</h2>
+<h2 class = "title-section">Frutas y Vegetales</h2>
 <section class="container"> 
 
 
@@ -46,7 +46,7 @@ if($query->num_rows > 0){
 
     <div class="product-box">
     <div class="product">
-    <a href="single_product_page.php?producto=<?php echo $id ;?>" target="_blank" rel="noopener noreferrer">
+    <a href="single_product_page.php?producto=<?php echo $id ;?>"  rel="noopener noreferrer">
         <p class="detail-title call-<?php echo $nombre_p ?>"><?php echo $nombre_p; ?></p>
         <div class="image-box" >
             <img class= "call-<?php echo $nombre_p ?>" src="<?php echo $url_p; ?>" alt="imagen de <?php echo $nombre_p?>" />
@@ -59,7 +59,6 @@ if($query->num_rows > 0){
                 <a href="#quit<?php echo $nombre_p?>"><i class="fas fa-minus"></i></a>
                 <i class="fas fa-shopping-cart" aria-hidden="true"></i>
                 <a href="#<?php echo $nombre_p?>"><i class="fas fa-plus"></i></a>
-                <p>gfgd</p>
                 
             </div>
         </div>
