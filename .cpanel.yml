@@ -2,4 +2,6 @@
 deployment:
   tasks:
     - export DEPLOYPATH=/home/xpresion/public_html/
-    - /bin/rsync -R la_huerta $DEPLOYPATH
+    - /bin/rm -Rf $DEPLOYPATH
+    - /bin/mkdir $DEPLOYPATH
+    - /bin/cp -R src/. $DEPLOYPATH
