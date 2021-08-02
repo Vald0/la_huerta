@@ -22,7 +22,7 @@ include 'header.php';
 
 <?php
 // Include the database configuration file
-include 'dbConfig.php';
+include 'dbconfig.php';
 
 // Obtener informacio de la base de datos
 $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
