@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-$dbHost     = "185.27.133.15:3306";
+$dbHost     = "189.179.131.216";
 $dbUsername = "xpresion_lahuerta";
 $dbPassword = "!Sop4s!";
 $dbName     = "xpresion_lahuerta_db";
