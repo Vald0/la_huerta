@@ -1,7 +1,7 @@
 <?php
 // Database configuration
 $dbHost     = "localhost";
-$dbUsername = "cpses_xp782uluwh";
+$dbUsername = "xpresion_lahuerta";
 $dbPassword = "!Sop4s!";
 $dbName     = "xpresion_lahuerta_db";
 
