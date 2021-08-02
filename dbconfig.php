@@ -1,6 +1,6 @@
 <?php
 // Database configuration
-$dbHost     = "tabien";
+$dbHost     = "localhost";
 $dbUsername = "xpresion_lahuerta";
 $dbPassword = "!Sop4s!";
 $dbName     = "xpresion_lahuerta_db";
