@@ -28,7 +28,7 @@ echo $id_call;
 
 <?php
 // Include the database configuration file
-include 'dbConfig.php';
+include 'dbconfig.php';
 
 // Obtener informacion de la base de datos
 $query = $db->query("SELECT * FROM t_product WHERE id = '$id_call'");
