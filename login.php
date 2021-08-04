@@ -29,10 +29,12 @@
                 <tr><td><input class="input_form" id="pass" type="password" name="contrasena" placeholder= "Contraseña"></td></tr>
                 <tr><td><div class="error" id="err_pass"></div></td></tr>
 
-                <tr><td><input class="form-submit" onclick ="validar()" type="submit" name="submit" value="Subir"></td></tr>
+                <tr><td><input class="form-submit" onclick ="validar()" type="submit" name="submit" value="Ingresar"></td></tr>
+                
             </table>
-
+          <div class="registrate">¿Eres nuevo?, Registrate<a href="admin.php"> Aquí.</a></div>
         </form>
+       
         </div>
     </body>
 </html>

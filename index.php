@@ -14,7 +14,14 @@
 </head>
 <body>
 <?php
+
+session_start();
+if ($_SESSION['usuario'] == ''){
+   header("Location:login.php");
+}
+
 include 'header.php';
+
 ?>
 <h2 class = "title-section">Frutas y Vegetales</h2>
 <section class="container"> 

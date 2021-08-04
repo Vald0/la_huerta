@@ -72,11 +72,11 @@
     <div class="error" id="err_mail"></div>
 <span class="field_form">
     <label for="pass">Contraseña:</label>
-    <input class="input_form" id="pass" type="password" name="contraseña" placeholder= "Contraseña">
+    <input class="input_form" id="pass" type="password" name="contrasena" placeholder= "Contraseña">
     </span>
 <span class="field_form">
     <label for="pass_2">Confirmar Contraseña:</label>
-    <input class="input_form" id="pass_2" type="password" name="contraseña" placeholder= "Confirmar Contraseña">
+    <input class="input_form" id="pass_2" type="password" name="contrasena" placeholder= "Confirmar Contraseña">
 </span>
     <div class="error" id="err_pass"></div>
     <input class="form-submit" onclick ="validar()" type="submit" name="submit" value="Registrar">

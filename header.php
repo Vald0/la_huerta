@@ -1,3 +1,5 @@
+<?php session_start(); ?>
+
 <header>
     <a href="index.php">
     <div class="logo-place ">
@@ -9,11 +11,17 @@
         <button class="btn-main btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
     <div class="options-place desktop">
-        <div class="item-option" title="Registrate">
-            <a href="admin.php"> <i class="fas fa-user" aria-hidden="true"></i></a>
-        </div>
         <div class="item-option" title="Ingresar">
-            <a href="login.php"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
+
+            <a href="admin.php">
+                <img class="perfil" src="img/<?php echo $_SESSION['usuario']['file_name'];?>" alt="imagen de perfil">
+                 <!-- <i class="fas fa-user" aria-hidden="true"></i> -->
+                
+                
+                </a>
+        </div>
+        <div class="item-option" title="Salir">
+            <a href="close_Login.php"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
         </div>
         <div class="item-option" title="Mis compras">
             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
