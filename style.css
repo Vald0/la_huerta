@@ -141,7 +141,7 @@ input::placeholder {
     max-width: 1180px;
 }
 
-.perfil {
+img.perfil {
     width: 4rem;
     height: 4rem;
     border-radius: 100%;
