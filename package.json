@@ -1,0 +1,22 @@
+{
+  "name": "la_huerta",
+  "version": "1.0.0",
+  "description": "conexion mysql desde node js",
+  "main": "demo_db_connection.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Vald0/la_huerta.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Vald0/la_huerta/issues"
+  },
+  "homepage": "https://github.com/Vald0/la_huerta#readme",
+  "dependencies": {
+    "mysql": "^2.18.1"
+  }
+}

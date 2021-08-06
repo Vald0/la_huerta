@@ -1,4 +1,8 @@
-<?php session_start(); ?>
+<?php session_start();
+if ($_SESSION['usuario'] == ''){
+    header("Location:login.php");
+ }
+?>
 
 <header>
     <a href="index.php">
