@@ -1,6 +1,6 @@
 <?php session_start();
 if ($_SESSION['usuario'] == ''){
-    header("Location:login.php");
+    header("Location:login.php?err_login=0");
  }
 ?>
 
@@ -15,14 +15,14 @@ if ($_SESSION['usuario'] == ''){
         <button class="btn-main btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
     </div>
     <div class="options-place desktop">
-        <div class="item-option" title="Ingresar">
+        <div class="item-option" title="Foto de perfil de <?php echo $_SESSION['usuario']['nombre'];?>">
 
-            <a href="admin.php">
+            <!-- <a href="admin.php"> -->
                 <img class="perfil" src="img/<?php echo $_SESSION['usuario']['file_name'];?>" alt="imagen de perfil">
                  <!-- <i class="fas fa-user" aria-hidden="true"></i> -->
                 
                 
-                </a>
+                <!-- </a> -->
         </div>
         <div class="item-option" title="Salir">
             <a href="close_Login.php"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>

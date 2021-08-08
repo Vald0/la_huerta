@@ -16,13 +16,26 @@ conexion.connect(function(error) {
     }
 });
 
-conexion.query('SELECT * FROM contactos ', function(error, results, fields) {
+conexion.query('SELECT * FROM contactos ', function(error, results) {
+
+
     if (error)
         throw error;
 
-    results.foreach(result => {
+    results.forEach(result => {
+
         console.log(result);
+
+        if (result.correo === mail && password === result.contrasena) {
+            alert("Encontrado")
+
+        } else {
+            console.log("nope");
+        }
+
+
     });
 });
+
 
 conexion.end();

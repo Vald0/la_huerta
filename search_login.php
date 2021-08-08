@@ -15,38 +15,47 @@ $contrasena = $_POST['contrasena'];
  $nr = mysqli_num_rows($query_c);
 
  $fila = mysqli_fetch_row($query_c);
+if  (empty($fila)){
+    echo 'suqmadiq';
 
-$name =  $fila[0]; // Nombre
-$lastN = $fila[1]; // Apellidos
-$address = $fila[2];// Direccion
-$tel = $fila[3]; // Telefono
-$pass = $fila[4]; // Contraseña
-$image = $fila[5]; // file_name
-$mail = $fila[6]; // Correo
- $userArray = array(
-     'nombre' => $name,
-     'apellidos' => $lastN, 
-     'correo' => $mail,
-     'direccion' => $address,
-     'telefono' => $tel,
-     'file_name' => $image
- );
+    header("Location:login.php?err_login=1");
 
-
-//  echo $userArray['nombre'].'<br>';
-//  echo $userArray['apellidos'].'<br>';
-//  echo $userArray['correo'].'<br>';
-//  echo $userArray['direccion'].'<br>';
-//  echo $userArray['telefono'].'<br>';
-//  echo $userArray['file_name'].'<br>';
-/*
-NUMERO DE REPORTE Telmex
-2671 4088 */
+    } else{
+        $name =  $fila[0]; // Nombre
+        $lastN = $fila[1]; // Apellidos
+        $address = $fila[2];// Direccion
+        $tel = $fila[3]; // Telefono
+        $pass = $fila[4]; // Contraseña
+        $image = $fila[5]; // file_name
+        $mail = $fila[6]; // Correo
+        $userArray = array(
+            'nombre' => $name,
+            'apellidos' => $lastN, 
+            'correo' => $mail,
+            'direccion' => $address,
+            'telefono' => $tel,
+            'file_name' => $image
+        );
 
 
+        //  echo $userArray['nombre'].'<br>';
+        //  echo $userArray['apellidos'].'<br>';
+        //  echo $userArray['correo'].'<br>';
+        //  echo $userArray['direccion'].'<br>';
+        //  echo $userArray['telefono'].'<br>';
+        //  echo $userArray['file_name'].'<br>';
+        /*
+        NUMERO DE REPORTE Telmex
+        2671 4088 */
 
-$_SESSION['usuario'] = $userArray; 
-echo $_SESSION['usuario']['file_name'];
-header("Location:index.php"); /* Redirección del navegador */
+
+
+        $_SESSION['usuario'] = $userArray; 
+        echo $_SESSION['usuario']['file_name'];
+        header("Location:index.php"); /* Redirección del navegador */  
+        
+    }
+
+
 ?>
 

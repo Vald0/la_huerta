@@ -30,7 +30,7 @@ $fileType = pathinfo($targetFilePath,PATHINFO_EXTENSION);
        
         if ($insert) {
             echo "Registro ingresado correctamente";
-            header("Location: login.php");
+            header("Location: login.php?err_login=2");
          } else {
             echo "Error: " . $insert . "" . mysqli_error($db);
          } 
