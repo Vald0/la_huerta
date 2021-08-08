@@ -49,8 +49,8 @@ if ($_SESSION['usuario'] == ''){
             <input class="search-movile" type="text" id="idbusqueda" placeholder="Encuentra todo lo que necesitas">
             <button class="btn-main btn-search"><i class="fa fa-search" aria-hidden="true"></i></button>
         </div>
-        <a href="#" class="link">Iniciar sesión <i class="fas fa-user" aria-hidden="true"></i></a>
-        <a href="#" class="link">Cerrar sesión <i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
+        <!-- <a href="#" class="link">Iniciar sesión <i class="fas fa-user" aria-hidden="true"></i></a> -->
+        <a href="close_Login.php" class="link">Cerrar sesión <i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
         <a href="#" class="link">Carrito <i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
 
 
