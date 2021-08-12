@@ -27,8 +27,10 @@ if ($_SESSION['usuario'] == ''){
         <div class="item-option" title="Salir">
             <a href="close_Login.php"><i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
         </div>
-        <div class="item-option" title="Mis compras">
+        <div class="item-option" title="Mis compras" style="display:flex;">
+        
             <i class="fas fa-shopping-cart" aria-hidden="true"></i>
+            <span class="selected_count" id="conteo_carro"></span>
         </div>
     </div>
 
@@ -51,7 +53,8 @@ if ($_SESSION['usuario'] == ''){
         </div>
         <!-- <a href="#" class="link">Iniciar sesión <i class="fas fa-user" aria-hidden="true"></i></a> -->
         <a href="close_Login.php" class="link">Cerrar sesión <i class="fas fa-sign-in-alt" aria-hidden="true"></i></a>
-        <a href="#" class="link">Carrito <i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+        
+        <a href="#" class="link">Carrito <i class="fas fa-shopping-cart" aria-hidden="true"></i><span class="selected_count"></span></a>
 
 
     </div>

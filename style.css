@@ -148,6 +148,16 @@ img.perfil {
     /*up*/
 }
 
+.selected_count {
+    background-color: #15b2ff;
+    font-size: 1.2rem;
+    padding: 0rem 1.1rem;
+    border-radius: 100%;
+    position: absolute;
+    left: 93%;
+    top: 36%;
+}
+
 
 /** Mobile Navbar **/
 

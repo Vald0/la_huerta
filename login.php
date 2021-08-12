@@ -40,13 +40,13 @@
                 
             </table>
             <?php
-            $_GET["err_login"];
+           
             if($_GET["err_login"]== 1){
               echo"<div class ="."err_login".">Contraseña o Correo Incorrecto, <br> por favor vuelva a intentarlo </div>";
             }
             elseif($_GET["err_login"]== 2){
               echo"<div class ="."reg_login".">Registrado correctamente, <br> inserta tus Datos!! </div>";
-            };
+            }
             ?>
 
           <div class="registrate">¿Eres nuevo?, Registrate<a href="admin.php"> Aquí.</a></div>
