@@ -143,7 +143,7 @@ function carrito_del(product){
    let productDel = product_car.indexOf(product);
     if(productDel > -1){
     product_car.splice(productDel, 1);
-    
+    localStorage.setItem('nombre',product_car);
     console.log(product_car);
     carrito_count();
 }
@@ -152,6 +152,7 @@ function carrito_del(product){
 
 function carrito_count(){
     let conteo_carro = document.getElementById("conteo_carro");
+    
     conteo_carro.innerHTML = product_car.length;
     
     if (product_car.length == 0){
