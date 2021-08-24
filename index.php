@@ -53,18 +53,18 @@ if($query->num_rows > 0){
     <div class="product-box">
     <div class="product">
     <a href="single_product_page.php?producto=<?php echo $id ;?>"  rel="noopener noreferrer">
-        <p class="detail-title call-<?php echo $cadena ?>"><?php echo $nombre_p; ?></p>
+        <p class="detail-title call-<?php echo $cadena ?>" id="nombre_p" ><?php echo $nombre_p; ?></p>
         <div class="image-box" >
             <img class= "call-<?php echo $cadena ?>" src="<?php echo $url_p; ?>" alt="imagen de <?php echo $cadena?>" />
         </div>   
     </a>
         <div class="details">
-            <p class="detail-price"> <span>$</span>  <?php echo $Precio; ?> / <?php echo $unidad; ?>  </p>
+            <p class="detail-price" id="details"> <span>$</span>  <?php echo $Precio; ?> / <?php echo $unidad; ?>  </p>
             
             <div class= "cart-select btn-carrito">
-                <a href="#quit<?php echo $cadena?>" onclick = "carrito_del(product = '<?php echo $nombre_p?>');"><i class="fas fa-minus"></i></a>
+                <a href="#quit<?php echo $cadena?>" onclick = "carrito_del(product_name = '<?php echo $nombre_p?>', product_price = '<?php echo $Precio?>', product_unit = '<?php echo $unidad?>');"><i class="fas fa-minus"></i></a>
                 <i class="fas fa-shopping-cart" aria-hidden="true"></i>
-                <a href="#<?php echo $cadena?>" onclick = "carrito_send(product = '<?php echo $nombre_p?>');"><i class="fas fa-plus"></i></a>
+                <a href="#<?php echo $cadena?>" onclick = "carrito_send(product_name = '<?php echo $nombre_p?>', product_price = '<?php echo $Precio?>', product_unit = '<?php echo $unidad?>');"><i class="fas fa-plus"></i></a>
                 
             </div>
         </div>
@@ -131,19 +131,20 @@ console.log(carrito_p);
 
 
 var product_car = []
-function carrito_send(product){
+
+function carrito_send(product_name, product_price, product_unit){
     
-    product_car.push(product);
-    console.log(product_car);
+    product_car.push(product_name);
+    console.log(product_car, product_price, product_unit);
     carrito_count();
 };
 
 
-function carrito_del(product){
+function carrito_del(product_name){
    let productDel = product_car.indexOf(product);
     if(productDel > -1){
     product_car.splice(productDel, 1);
-    localStorage.setItem('nombre',product_car);
+
     console.log(product_car);
     carrito_count();
 }
@@ -158,6 +159,7 @@ function carrito_count(){
     if (product_car.length == 0){
         conteo_carro.innerHTML = "";
     }
+    
 };
    </script>
 </html>

@@ -652,3 +652,10 @@ table {
     padding: 1rem;
     border-radius: 15%;
 }
+
+
+/***CARRITO LIST***/
+
+.carrito-list {
+    margin-top: 6rem;
+}
