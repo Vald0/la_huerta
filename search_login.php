@@ -22,12 +22,12 @@ if  (empty($fila)){
 
     } else{
         $name =  $fila[0]; // Nombre
-        $lastN = $fila[1]; // Apellidos
-        $address = $fila[2];// Direccion
-        $tel = $fila[3]; // Telefono
-        $pass = $fila[4]; // Contraseña
-        $image = $fila[5]; // file_name
-        $mail = $fila[6]; // Correo
+        $mail = $fila[1]; // Correo
+        $lastN = $fila[2]; // Apellidos
+        $address = $fila[3];// Direccion
+        $tel = $fila[4]; // Telefono
+        $pass = $fila[5]; // Contraseña
+        $image = $fila[6]; // file_name
         $userArray = array(
             'nombre' => $name,
             'apellidos' => $lastN, 

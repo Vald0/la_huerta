@@ -44,7 +44,7 @@ if($query->num_rows > 0){
         $url_p = $row["file_name"];
         $Precio = $row["Precio"];
         $status = $row["status"];
-        $unidad = $row["Unidad"];
+        $unidad = $row["unidad"];
         $id = $row["id"];
 
 ?>

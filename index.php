@@ -43,7 +43,7 @@ if($query->num_rows > 0){
         $url_p = $row["file_name"];
         $Precio = $row["Precio"];
         $status = $row["status"];
-        $unidad = $row["Unidad"];
+        $unidad = $row["unidad"];
         $id = $row["id"];
         $cadena = str_replace(' ','',$nombre_p);
 
@@ -151,16 +151,17 @@ function carrito_del(product_name, product_price, product_unit){
         precio: product_price,
         unidad: product_unit 
     };
-   var find =  product_car.indexOf(objectProduct.nombre);
-   console.log(find);
+   
+   index = product_car.findIndex(x => x.nombre === product_name);
+   console.log(index);
    console.log(objectProduct);
-   console.log(productDel);
-    if(productDel > -1){
-    product_car.splice(productDel, 1);
+   
+     if(index > -1){
+     product_car.splice(index, 1);
 
     console.log(product_car);
     carrito_count();
- }
+  }
 }
  
 
