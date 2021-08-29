@@ -24,7 +24,8 @@ include 'header.php';?>
     <?php include 'footer.php' ?>
 </body>
 <script>
-    console.log(localStorage.getItem('nombre'));
+    console.log(localStorage.getItem('datos'));
+    
 </script>
 
 

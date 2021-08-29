@@ -131,7 +131,8 @@ $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
 
 
 var product_car = []
-
+var guardado = localStorage.getItem('datos');
+console.log(guardado);
 //Esta funcion especifica añadir el producto seleccionado por el cliente
 function carrito_send(product_name, product_price, product_unit){
     let objectProduct = {
@@ -166,6 +167,7 @@ function carrito_del(product_name, product_price, product_unit){
  
 
 function carrito_count(){
+    localStorage.setItem('datos', product_car.value);
     let conteo_carro = document.getElementById("conteo_carro");
     
     conteo_carro.innerHTML = product_car.length;
@@ -173,6 +175,7 @@ function carrito_count(){
     if (product_car.length == 0){
         conteo_carro.innerHTML = "";
     }
+    console.log('objetoObtenido: ', JSON.parse(guardado));
     
 };
 
