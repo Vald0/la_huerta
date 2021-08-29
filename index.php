@@ -103,7 +103,7 @@ const carrito_p = [];
 
 <?php 
 //inlur el archivo de configuracion de la conexion de la base de datos
-include 'dbConfig.php';
+include 'dbconfig.php';
 // Obtener informacio de la base de datos
 $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
      if($query->num_rows > 0){
