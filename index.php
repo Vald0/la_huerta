@@ -124,15 +124,20 @@ $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
 }?>
 <?php
 }  ?>
-// console.log(carrito_p);
 
 
 
 
 
-var product_car = []
-var guardado = localStorage.getItem('datos');
-console.log(guardado);
+
+
+var data = JSON.parse(localStorage.getItem('datos'));
+var datalength = data.length;
+console.log(data);
+console.log(datalength);
+var product_car = [];
+product_car = data;
+
 //Esta funcion especifica añadir el producto seleccionado por el cliente
 function carrito_send(product_name, product_price, product_unit){
     let objectProduct = {
@@ -167,16 +172,17 @@ function carrito_del(product_name, product_price, product_unit){
  
 
 function carrito_count(){
-    localStorage.setItem('datos', product_car.value);
-    let conteo_carro = document.getElementById("conteo_carro");
+    localStorage.setItem('datos', JSON.stringify(product_car));
+     conteo_carro = document.getElementById("conteo_carro");
+     data = JSON.parse(localStorage.getItem('datos'));
+     
+    conteo_carro.innerHTML = datalength;
     
-    conteo_carro.innerHTML = product_car.length;
-    
-    if (product_car.length == 0){
+    if (datalength == 0){
         conteo_carro.innerHTML = "";
     }
-    console.log('objetoObtenido: ', JSON.parse(guardado));
     
+    console.log(data);
 };
 
 ///PROTOTYPE JAVASCRIPT?

@@ -24,8 +24,10 @@ include 'header.php';?>
     <?php include 'footer.php' ?>
 </body>
 <script>
-    console.log(localStorage.getItem('datos'));
-    
+var data = JSON.parse(localStorage.getItem('datos'));
+var datalength = data.length;
+console.log(data);
+console.log(datalength);
 </script>
 
 
