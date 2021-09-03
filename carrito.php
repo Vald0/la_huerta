@@ -18,17 +18,11 @@ session_start();
 include 'header.php';?>
 
 <div class= "carrito-list">
-    <div>Carrito mamalon</div>
+    <div id="lista">Carrito mamalon</div>
 </div>
 
     <?php include 'footer.php' ?>
 </body>
-<script>
-var data = JSON.parse(localStorage.getItem('datos'));
-var datalength = data.length;
-console.log(data);
-console.log(datalength);
-</script>
-
-
+<script src="js/carrito.js"></script>
+<script src="js/cartList.js"></script>
 </html>
