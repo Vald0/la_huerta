@@ -16,11 +16,13 @@
 <?php
 session_start();
 include 'header.php';?>
-
-<div class= "carrito-list">
-    <div id="lista">Carrito mamalon</div>
+<div class="recibo">
+  <h1>Total a pagar:</h1>
+  <div id="carrito-list" class= "carrito-list">
+      
+    </div>
+    <div id="total" class="total"></div>
 </div>
-
     <?php include 'footer.php' ?>
 </body>
 <script src="js/carrito.js"></script>

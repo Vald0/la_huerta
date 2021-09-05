@@ -656,6 +656,35 @@ table {
 
 /***CARRITO LIST***/
 
+.recibo {
+    display: grid;
+    margin-top: 4rem;
+    margin-left: 3rem;
+    justify-content: flex-start;
+    justify-items: center;
+}
+
 .carrito-list {
-    margin-top: 6rem;
+    margin: 0 4rem;
+    padding: 2rem;
+    display: grid;
+    justify-items: end;
+}
+
+.listed-prod {
+    display: flex;
+    align-items: center;
+    font-size: medium;
+}
+
+.listed-prod>p:nth-child(1) {
+    margin-right: 2rem;
+}
+
+span {
+    margin-right: 2rem;
+}
+
+.total {
+    font-size: 2.5rem;
 }
