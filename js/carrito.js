@@ -1,8 +1,8 @@
+let product_car = [];
 var data = JSON.parse(localStorage.getItem('datos'));
 var datalength = data.length;
 console.log(data);
 console.log(datalength);
-let product_car = [];
 product_car = data;
 carrito_count();
 //Esta funcion especifica añadir el producto seleccionado por el cliente
