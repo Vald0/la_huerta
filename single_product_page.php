@@ -59,7 +59,7 @@ if($query->num_rows > 0){
         <div class="rigth-info">
          <h3> <?php echo '$ '.$Precio.'/'. $unidad ?> </h3>
          <div class="boton-carrito">
-         <a href="">Agregar al carrito<i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
+         <a  onclick = "carrito_send(product_name = '<?php echo $nombre_p?>', product_price = '<?php echo $Precio?>', product_unit = '<?php echo $unidad?>');">Agregar al carrito<i class="fas fa-shopping-cart" aria-hidden="true"></i></a>
         </div>
       </div>
   
@@ -86,6 +86,40 @@ else{ ?>
 
 </section>
 
-<?php include 'footer.php'; ?> 
+<?php include 'footer.php'; ?>
+<script>
+  
+<?php
+// Include the database configuration file
+include 'dbconfig.php';
+
+// Obtener informacion de la base de datos
+$query = $db->query("SELECT * FROM t_product WHERE id = '$id_call'");
+
+
+if($query->num_rows > 0){
+   
+    
+    
+    if($row = $query->fetch_assoc()){
+
+        $nombre_p = $row["Nombre"];
+        $url_p = $row["file_name"];
+        $Precio = $row["Precio"];
+        $status = $row["status"];
+        $unidad = $row["unidad"];
+        $id = $row["id"];
+
+?>
+ 
+    <?php if($status == 1){ ?>
+      const carrito_p = []; 
+      <?php } ?>
+  
+      <?php } ?>
+      <?php } ?>
+
+</script> 
+<script src="js/carrito.js"></script>
 </body>
 </html>

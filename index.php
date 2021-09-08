@@ -123,16 +123,7 @@ $query = $db->query("SELECT * FROM t_product ORDER BY conjunto DESC");
 <?php 
 }?>
 <?php
-}  ?>
-
-
-
-
-
-
-
-
-   </script>
+}  ?></script>
    <script src="js/carrito.js"></script>
    
 </html>

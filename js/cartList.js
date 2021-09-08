@@ -29,7 +29,11 @@ for (let fila = 0; fila < data.length; fila++) {
             line.innerHTML = descripcion;
 
         }
-
     }
+    var btn = document.createElement("BUTTON");
+    btn.setAttribute("id", `delete-btn`);
+    btn.innerHTML = "🧺"
+    document.getElementById(`listing-${fila}`).appendChild(btn);
 }
+
 subtotal.innerHTML = `Total : $ ${total}`;
