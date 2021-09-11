@@ -688,3 +688,14 @@ span {
 .total {
     font-size: 2.5rem;
 }
+
+#delete-btn {
+    border: none;
+    background-color: #ff5959;
+    color: aliceblue;
+    padding: 0.3rem;
+}
+
+#delete-btn:hover {
+    background-color: #fd3030;
+}

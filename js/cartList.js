@@ -2,38 +2,48 @@
 data = JSON.parse(localStorage.getItem('datos'));
 var total = 0;
 var subtotal = document.getElementById('total');
-// document.getElementById('lista').textContent = Object.values(data[1]);
 
-for (let fila = 0; fila < data.length; fila++) {
-    const cartlist = Object.values(data[fila]);
-    var div = document.createElement("div");
-    // div.innerHTML = "<span>•</span>";
-    document.getElementById("carrito-list").appendChild(div);
-    div.classList.add("listed-prod");
-    div.setAttribute("id", `listing-${fila}`);
+lista();
 
-    console.log(cartlist);
-    for (let columna = 0; columna < cartlist.length; columna++) {
-        var descripcion = cartlist[columna];
-        console.log(descripcion);
-        var line = document.createElement("p");
+function lista() {
 
-        document.getElementById(`listing-${fila}`).appendChild(line);
-        if (!isNaN(cartlist[columna])) {
+    for (let fila = 0; fila < data.length; fila++) {
+        const cartlist = Object.values(data[fila]);
+        var div = document.createElement("div");
 
-            descripcion = `..........$${cartlist[columna]}/`;
-            total += parseFloat(cartlist[columna]);
-            line.innerHTML = descripcion;
+        document.getElementById("carrito-list").appendChild(div);
+        div.classList.add("listed-prod");
+        div.setAttribute("id", `listing-${fila}`);
 
-        } else {
-            line.innerHTML = descripcion;
+        console.log(cartlist);
+        for (let columna = 0; columna < cartlist.length; columna++) {
+            var descripcion = cartlist[columna];
+            console.log(descripcion);
+            var line = document.createElement("p");
 
+            document.getElementById(`listing-${fila}`).appendChild(line);
+            if (!isNaN(cartlist[columna])) {
+
+                descripcion = `..........$${cartlist[columna]}/`;
+                total += parseFloat(cartlist[columna]);
+                line.innerHTML = descripcion;
+
+            } else {
+                line.innerHTML = descripcion;
+
+            }
         }
+        var btn = document.createElement("span");
+        btn.setAttribute("id", `delete-btn`);
+        console.log(`Carrito ${cartlist[0]} ${cartlist[1]} ${cartlist[2]} `);
+        btn.innerHTML = `<a onclick = "carrito_del(product_name ='${cartlist[0]}', product_price ='${cartlist[1]}', product_unit ='${cartlist[2]}', numList ='${fila}');"><i class="fas fa-trash-alt"></i></a>`
+        document.getElementById(`listing-${fila}`).appendChild(btn);
     }
-    var btn = document.createElement("BUTTON");
-    btn.setAttribute("id", `delete-btn`);
-    btn.innerHTML = "🧺"
-    document.getElementById(`listing-${fila}`).appendChild(btn);
+
+    subtotales();
+
 }
 
-subtotal.innerHTML = `Total : $ ${total}`;
+function subtotales() {
+    subtotal.innerHTML = `Total : $ ${total}`;
+}
