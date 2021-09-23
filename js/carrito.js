@@ -37,11 +37,12 @@ function carrito_del(product_name, product_price, product_unit, numList) {
         product_car.splice(index, 1);
         console.log(product_car);
         carrito_count();
+        localStorage.setItem('datos', JSON.stringify(product_car));
+
         var listado = document.getElementById(`listing-${numList}`);
         listado.parentNode.removeChild(listado);
         total = total - product_price;
         subtotales();
-
     }
     localStorage.setItem('datos', JSON.stringify(product_car));
 

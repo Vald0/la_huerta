@@ -20,10 +20,13 @@ include 'header.php';?>
   <h1>Total a pagar:</h1>
   <div id="carrito-list" class= "carrito-list">
       
-    </div>
+  </div>
+  <div class="total-section" id="send">
     <div id="total" class="total"></div>
+    
+  </div>
 </div>
-    <?php include 'footer.php' ?>
+    <?php include 'footer.php'?>
 </body>
 <script src="js/carrito.js"></script>
 <script src="js/cartList.js"></script>

@@ -8,6 +8,16 @@
 </head>
 <body>
 <?php
+   $productos = ($_GET["objectTicket"]);
+   $obj = json_decode($productos, true);
+   echo(count($obj));
+   echo($obj[7]['nombre']);
+   
+//  for ($i = 1; $i <= count($obj); $i++) {
+//   echo($obj[i]['nombre'].$obj[i]['precio'].$obj[i]['unidad']);
+//  }
+
+
     $amigos = array (array("nombre"=>"Pedro Torres", "direccion" =>"CL Mayor, 37","telefono"=>"8787907229"),
     array("nombre"=>"fernando pascal", "direccion" =>"Enrique segoviano","telefono"=>"5807445"),
     array("nombre"=>"edlein vaszques", "direccion" =>"Mar del norte","telefono"=>"8787907229"),
@@ -44,12 +54,6 @@
     echo("<td>".$amigos[3]["telefono"]."</td>");
     echo("</tr>");
     echo("</table>");
-
-    echo($name);
-
-    
-    
-
 ?>    
 </body>
 </html>
