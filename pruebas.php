@@ -8,6 +8,44 @@
 </head>
 <body>
 <?php
+   $productos = ($_GET["objectTicket"]);
+   $obj = json_decode($productos, true);
+   echo(count($obj));
+   echo($obj[0]['nombre']);
+   
+   foreach ($obj as $k=>$v){
+     echo($obj[$k]['nombre']." $".$obj[$k]['precio']." /".$obj[$k]['unidad']."<br>"); // etc.
+}
+//  for ($i = 1; $i <= count($obj); $i++) {
+//   echo($obj[i]['nombre'].$obj[i]['precio'].$obj[i]['unidad']);
+//  }
+
+class MiClase
+{
+    public $var1 = 'valor 1';
+    public $var2 = 'valor 2';
+    public $var3 = 'valor 3';
+
+    protected $protected = 'variable protegida';
+    private   $private   = 'variable privada';
+
+    function iterateVisible() {
+       echo "MiClase::iterateVisible:\n";
+       foreach ($this as $clave => $valor) {
+           print "$clave => $valor\n";
+       }
+    }
+}
+
+$clase = new MiClase();
+
+foreach($clase as $clave => $valor) {
+    print "$clave => $valor\n";
+}
+echo "\n";
+
+
+$clase->iterateVisible();
     $amigos = array (array("nombre"=>"Pedro Torres", "direccion" =>"CL Mayor, 37","telefono"=>"8787907229"),
     array("nombre"=>"fernando pascal", "direccion" =>"Enrique segoviano","telefono"=>"5807445"),
     array("nombre"=>"edlein vaszques", "direccion" =>"Mar del norte","telefono"=>"8787907229"),
@@ -44,12 +82,6 @@
     echo("<td>".$amigos[3]["telefono"]."</td>");
     echo("</tr>");
     echo("</table>");
-
-    echo($name);
-
-    
-    
-
 ?>    
 </body>
 </html>
