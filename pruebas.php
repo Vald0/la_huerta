@@ -10,8 +10,7 @@
 <?php
    $productos = ($_GET["objectTicket"]);
    $obj = json_decode($productos, true);
-   echo(count($obj));
-   echo($obj[0]['nombre']);
+  
    
    foreach ($obj as $k=>$v){
      echo($obj[$k]['nombre']." $".$obj[$k]['precio']." /".$obj[$k]['unidad']."<br>"); // etc.
