@@ -54,6 +54,6 @@ my_json = JSON.stringify(data);
 var btn_send = document.createElement("a");
 btn_send.setAttribute("id", `buy_button`);
 
-btn_send.href = `pruebas.php?objectTicket=${my_json}`;
+btn_send.href = `reciboPdf.php?objectTicket=${my_json}`;
 btn_send.textContent = "Imprimir recibo";
 document.getElementById("send").appendChild(btn_send);

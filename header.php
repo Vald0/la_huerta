@@ -3,7 +3,7 @@ if ($_SESSION['usuario'] == ''){
     header("Location:login.php?err_login=0");
  }
 ?>
-
+<?php header("Content-Type: text/html;charset=utf-8"); ?>
 <header>
     <a href="index.php">
     <div class="logo-place ">
